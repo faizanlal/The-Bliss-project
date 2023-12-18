@@ -84,3 +84,8 @@ nav {
   border: 1px rgb(236, 238, 248);
   background: transparent;
 }
+
+.h-text a:hover {
+  border: 1px rgb(236, 238, 248);
+  background: transparent;
+}
