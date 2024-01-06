@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>TheBliss</title>
     <link rel="stylesheet" href="index.css" />
     <link
@@ -14,30 +13,31 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="navbar">
         <div class="logo">The Bliss</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <div class="menu">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Event</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="register">
+          <a href="about.html">About</a>
+          <a href="event.html">Event</a>
+          <a href="contact.html">Contact</a>
           <a href="login.html">Login</a>
         </div>
       </nav>
-      <section class="h-text">
+      <section class="hero-text">
         <h1>Create Beautiful Memories</h1>
-        <br />
         <h1>Your Event Planner</h1>
         <br />
+        <h3>Every Event Should Be Perfect</h3>
 
-        <span><h3>Every Event Should Be Perfect</h3></span>
-        <br />
-        <br />
-        <br />
-        <a href="#">Learn more</a>
+        <a href="learn.html">Learn more</a>
       </section>
     </header>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.querySelector(".menu");
+        menu.classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
