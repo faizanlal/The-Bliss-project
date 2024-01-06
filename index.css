@@ -4,88 +4,157 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+}
+
 header {
   width: 100%;
   height: 100vh;
   background-image: url(background.jpg);
   background-size: cover;
-  font-family: "poppins", sans-serif;
+  position: relative;
 }
 
-nav {
-  width: 100%;
-  height: 100px;
-
-  color: white;
+.navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8); /* Changed transparency */
 }
 
 .logo {
-  font-size: 2em;
-  letter-spacing: 2px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
 }
 
 .menu a {
   text-decoration: none;
-  color: rgb(227, 229, 233);
-  padding: 10px 20px;
-  font-size: 20px;
+  color: white;
+  margin: 0 15px;
 }
 
-.menu a:hover {
-  border: 3px solid rgb(26, 140, 26);
+.menu a:last-child {
+  margin-right: 0;
 }
 
-.register a {
-  text-decoration: none;
-  color: rgb(220, 218, 218);
-  padding: 10px 20px;
-  font-size: 20px;
-  background: green;
-  border-radius: 8px;
+.cart-info {
+  font-size: 0.8em; /* Adjusted cart info size */
 }
 
-.h-text {
+.hero-text {
+  text-align: center;
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 1000px;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: rgb(10, 9, 10);
+  width: 100%;
 }
 
-.h-text span {
-  letter-spacing: 5px;
+.hero-text h1 {
+  font-size: 2.5em;
 }
 
-.h-text h1 {
-  font-size: 3.5em;
+.hero-text h3 {
+  font-size: 1.2em;
 }
 
-.h-text a {
+.hero-text a {
   text-decoration: none;
-  color: rgb(214, 209, 209);
+  color: white;
   padding: 10px 20px;
-  font-size: 22px;
+  font-size: 1.2em;
   border-radius: 10px;
   background-color: green;
-}
-.register a:hover {
-  border: 1px rgb(237, 237, 242);
-  background: transparent;
-  transform: 0.4s;
+  transition: background 0.4s;
+  display: inline-block;
+  margin-top: 20px;
 }
 
-.h-text a:hover {
-  border: 1px rgb(236, 238, 248);
+.hero-text a:hover {
   background: transparent;
 }
 
-.h-text a:hover {
-  border: 1px rgb(236, 238, 248);
-  background: transparent;
+/* Media Query for smaller screens (phones) */
+@media only screen and (max-width: 767px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 15px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .cart-info {
+    font-size: 0.8em; /* Adjusted cart info size */
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  /* Different style for opened menu */
+  .menu.show {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+  }
+
+  .menu.show a {
+    margin: 10px 0;
+    font-size: 1.2em;
+    background: none;
+  }
+
+  .menu.show a:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu.show .login {
+    display: block;
+  }
+
+  .login {
+    display: none;
+    margin-top: 20px;
+    color: white;
+  }
 }
+
